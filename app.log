@@ -1,0 +1,28 @@
+WARNING 2024-05-10 04:48:15,587 log Bad Request: /api/login
+INFO 2024-05-10 04:50:12,730 autoreload /var/www/html/vms/vms/settings.py changed, reloading.
+INFO 2024-05-10 04:50:13,157 autoreload Watching for file changes with StatReloader
+INFO 2024-05-10 04:51:16,718 autoreload /var/www/html/vms/procurement/views.py changed, reloading.
+INFO 2024-05-10 04:51:17,124 autoreload Watching for file changes with StatReloader
+INFO 2024-05-10 04:51:32,878 autoreload /var/www/html/vms/procurement/views.py changed, reloading.
+INFO 2024-05-10 04:51:33,275 autoreload Watching for file changes with StatReloader
+WARNING 2024-05-10 04:51:39,869 log Unauthorized: /api/purchase_orders/
+INFO 2024-05-10 04:53:43,022 signals Recalculating fulfillment rate.
+WARNING 2024-05-10 04:53:48,484 log Unauthorized: /api/purchase_orders/
+INFO 2024-05-10 05:11:02,583 autoreload Watching for file changes with StatReloader
+WARNING 2024-05-10 05:13:00,977 log Not Found: /api/vendors/1/
+WARNING 2024-05-10 05:13:39,587 log Not Found: /api/vendors/10/
+WARNING 2024-05-10 05:14:49,961 log Not Found: /api/vendors/1/
+WARNING 2024-05-10 05:14:55,176 log Not Found: /api/vendors/3/
+WARNING 2024-05-10 05:14:58,992 log Not Found: /api/vendors/4/
+WARNING 2024-05-10 05:16:41,227 log Not Found: /api/purchase_orders/1/acknowledge/
+WARNING 2024-05-10 05:16:45,827 log Not Found: /api/purchase_orders//acknowledge/
+WARNING 2024-05-10 05:16:47,053 log Not Found: /api/purchase_orders/2/acknowledge/
+WARNING 2024-05-10 05:16:55,425 log Unauthorized: /api/purchase_orders/
+WARNING 2024-05-10 05:16:58,676 log Unauthorized: /api/purchase_orders/
+WARNING 2024-05-10 05:17:00,843 log Unauthorized: /api/purchase_orders/
+WARNING 2024-05-10 05:17:02,204 log Unauthorized: /api/purchase_orders/
+WARNING 2024-05-10 05:17:03,912 log Unauthorized: /api/purchase_orders/
+WARNING 2024-05-10 05:17:07,711 log Unauthorized: /api/purchase_orders/
+WARNING 2024-05-10 05:18:10,620 log Not Found: /api/purchase_orders/2/acknowledge/
+INFO 2024-05-10 05:18:13,599 signals Recalculating fulfillment rate.
+INFO 2024-05-10 05:18:13,605 signals Purchase order completed with a quality rating. Recalculating quality rating average.
