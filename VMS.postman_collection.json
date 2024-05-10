@@ -1,0 +1,554 @@
+{
+	"info": {
+		"_postman_id": "e14ae164-f874-4f60-9700-b27f6a617c5a",
+		"name": "VMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15777040"
+	},
+	"item": [
+		{
+			"name": "PO",
+			"item": [
+				{
+					"name": "Purchase Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"vendor\": 2, \n  \"order_date\": \"2024-05-03T10:00:00Z\",\n  \"items\": [\n    {\n      \"description\": \"Item A\",\n      \"unit_price\": 19.99,\n      \"quantity\": 10\n    },\n    {\n      \"description\": \"Item B\",\n      \"unit_price\": 29.99,\n      \"quantity\": 5\n    }\n  ],\n  \"quantity\": 15\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/purchase_orders/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"purchase_orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Purchase Order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"vendor\": 9, \n  \"order_date\": \"2024-05-03T10:00:00Z\",\n  \"items\": [\n    {\n      \"description\": \"Item A\",\n      \"unit_price\": 19.99,\n      \"quantity\": 10\n    },\n    {\n      \"description\": \"Item B\",\n      \"unit_price\": 29.99,\n      \"quantity\": 5\n    }\n  ],\n  \"quantity\": 15\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/purchase_orders/?vendor_id=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"purchase_orders",
+								""
+							],
+							"query": [
+								{
+									"key": "vendor_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Purchase Order Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/purchase_orders/5/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"purchase_orders",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Purchase Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/purchase_orders/5/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"purchase_orders",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Purchase Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"vendor\": 2, \n  \"order_date\": \"2024-05-03T10:00:00Z\",\n  \"items\": [\n    {\n      \"description\": \"Item A\",\n      \"unit_price\": 19.99,\n      \"quantity\": 10\n    },\n    {\n      \"description\": \"Item B\",\n      \"unit_price\": 29.99,\n      \"quantity\": 5\n    }\n  ],\n  \"quantity\": 15,\n  \"delivery_date\": \"2024-06-09T10:00:00Z\",\n  \"issue_date\": \"2024-06-09T10:00:00Z\"\n\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/purchase_orders/4/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"purchase_orders",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Purchase Order Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": \"completed\" \n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/purchase_orders/6/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"purchase_orders",
+								"6",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendor",
+			"item": [
+				{
+					"name": "Add Vendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Rupali Aadtiya\", \n  \"contact_details\": \"8871396530\",\n  \"address\": \"Indore\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/vendors/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vendors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vendor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Rupali Luhar\", \n  \"contact_details\": \"8871396530\",\n  \"address\": \"Jaipur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/vendors/1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vendors",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Vendor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/vendors/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vendors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vendor Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/vendors/1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vendors",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vendor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/vendors/10/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vendors",
+								"10",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Acknowledge PO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/purchase_orders/1/acknowledge/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"purchase_orders",
+								"1",
+								"acknowledge",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Performance matrix",
+			"item": [
+				{
+					"name": "Vendor Performance Matrix",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/vendors/1/performance/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vendors",
+								"1",
+								"performance",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rupali@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Rupali",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "8872396530",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Rupali@1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/addUser",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rupali@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Rupali@1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1MzIwNDk4LCJpYXQiOjE3MTUzMjAxOTgsImp0aSI6ImI2N2ZhOTVhZDNlZjQ4NzNiOTc3ZTgxZDlhMzNlYzg1IiwidXNlcl9pZCI6Mn0.4MrBNdVHsXQHvqoRg0DZVRkv0xVpB1fv4Kn5PcJoePo"
+		}
+	]
+}
